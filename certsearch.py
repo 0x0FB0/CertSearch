@@ -49,9 +49,9 @@ if 'results' not in addr_data:
     exit(1)
 
 if debug == 1:
-    print "\033[33m"+"+"*50
-    print json.dumps(addr_data, indent=4)
-    print "\033[33m"+"+"*50+"\033[0m"
+    print >> sys.stderr, "\033[33m"+"+"*50
+    print >> sys.stderr, json.dumps(addr_data, indent=4)
+    print >> sys.stderr, "\033[33m"+"+"*50+"\033[0m"
 
 cert_list = {}
 cached_data = {}
@@ -177,9 +177,9 @@ for e in addr_data['results']:
             print "\033[0m"
             cnt = cnt+1
             if debug == 1:
-                print "\033[33m"+"+"*50
-                print json.dumps(cert_info, indent=4)
-                print "+"*50+"\033[0m"
+                print >> sys.stderr, "\033[33m"+"+"*50
+                print >> sys.stderr, json.dumps(cert_info, indent=4)
+                print >> sys.stderr, "+"*50+"\033[0m"
 if init == 1:
     with open(DATAFILE, 'w+') as db:
         db.write(json.dumps(cert_list, indent=4))
