@@ -124,6 +124,8 @@ for e in addr_data['results']:
                             print "\033[33m[i] Alert email sent.\033[0m"
                         except Exception:
                             print "\033[31m\033[1m[ERR] Email client error!\033[0m"
+                    elif batch == 1:
+                        init = 1
                     else:
                         ask = str(raw_input("\033[43m\033[31mDo you want to overwrite?(N/y):\033[0m "))
                         if ask == 'y' or ask == 'Y':
