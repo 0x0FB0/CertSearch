@@ -32,6 +32,6 @@ Certificate search and monitoring through Censys API
 
 `./urlsearch.py example.com --batch --alert`
 
-### Gathering aditional data
+### Gathering additional data
 
 `./urlsearch.py example.com --debug 3>&1 1>&2 2>&3 | grep rsa_public_key -A 3`
