@@ -109,7 +109,7 @@ for e in addr_data['results']:
                     if batch == 1 and alert == 1:
                         try:
                             init = 1
-                            text = "Certificate for %s (%s) have changed!\n"
+                            text = "Certificate for %s (%s) have changed!\n" % (e['ip'], hostname)
                             text += "Query: subject_alt_name.dns_names %s\n\n" % domain
                             text += "Certificate diff:"
                             text += jdiff
